@@ -1,0 +1,61 @@
+html,body {
+    text-align: center;
+}
+
+canvas{
+    border:3px solid black ;
+}
+
+.buttonLeft {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top:90%;
+    left: 20%;
+    display: none;
+}
+
+.buttonUp {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top:90%;
+    left: 40%;
+    display: none;
+}
+
+.buttonDown {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top:90%;
+    left: 60%;
+    display: none;
+}
+
+.buttonRight {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    top:90%;
+    left: 80%;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .buttonLeft {
+        display: block;
+    }
+
+    .buttonUp {
+        display: block;
+    }
+
+    .buttonDown {
+        display: block;
+    }
+
+    .buttonRight {
+        display: block;
+    }
+}
