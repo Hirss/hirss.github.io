@@ -81,6 +81,7 @@ function update() {
         //Победа
         gameWin = True;
         alert("Вы выиграли! Ваш счёт: "+snakeBody.length);
+        document.getElementById('restartButton').classList.replace('buttonRefresh-hiden', 'buttonRefresh-visible');
         
     }
 
@@ -90,6 +91,7 @@ function update() {
             // Съел себя
             gameOver = true;
             alert("Вы проиграли. Ваш счёт: "+snakeBody.length);
+            document.getElementById('restartButton').classList.replace('buttonRefresh-hiden', 'buttonRefresh-visible');
         }
     }
 
