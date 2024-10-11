@@ -81,18 +81,23 @@ canvas{
 
 @media (max-width: 599px) {
     .buttonLeft {
-        display: block;
+        display: flex;
     }
 
     .buttonUp {
-        display: block;
+        display: flex;
     }
 
     .buttonDown {
-        display: block;
+        display: flex;
     }
 
     .buttonRight {
-        display: block;
+        display: flex;
+    }
+
+    .buttonRefresh-visible{
+        left: 23%;
+
     }
 }
