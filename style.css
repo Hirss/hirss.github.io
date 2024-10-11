@@ -1,0 +1,98 @@
+html,body {
+    text-align: center;
+}
+
+canvas{
+    border:3px solid black ;
+}
+
+.buttonLeft {
+    background: #51A3B8;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 7px 0px #387796;
+    transition: all .2s;
+    position: relative;
+    padding: 15px 25px;
+    margin:0 20px;
+    display: none;
+    float: left;
+}
+
+.buttonUp {
+    background: #51A3B8;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 7px 0px #387796;
+    transition: all .2s;
+    position: relative;
+    padding: 15px 25px;
+    margin:0 5px;
+    display: none;
+    float: left;
+}
+
+.buttonDown {
+    background: #51A3B8;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 7px 0px #387796;
+    transition: all .2s;
+    position: relative;
+    padding: 15px 25px;
+    margin:0 20px;
+    display: none;
+    float: left;
+}
+
+.buttonRight {
+    background: #51A3B8;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 7px 0px #387796;
+    transition: all .2s;
+    position: relative;
+    padding: 15px 25px;
+    margin:0 5px;
+    display: none;
+    float: left;
+}
+.buttonRefresh-hiden {
+    display: none;
+}
+
+.buttonRefresh-visible {
+    background: #51A3B8;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 7px 0px #387796;
+    position:fixed;
+    top: 40%;
+    left: 43%;
+    transition: all .2s;
+    padding: 15px 25px;
+    margin:0 5px;
+}
+
+@media (max-width: 599px) {
+    .buttonLeft {
+        display: block;
+    }
+
+    .buttonUp {
+        display: block;
+    }
+
+    .buttonDown {
+        display: block;
+    }
+
+    .buttonRight {
+        display: block;
+    }
+}
