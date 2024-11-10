@@ -7,7 +7,7 @@ let context;
 let snakeX = blockSize * 5;
 let snakeY = blockSize * 5;
 
-let speedX = 0;
+let speedX = 0;//Задаёт начальную скорость 0
 let speedY = 0;
 
 let snakeBody = [];
@@ -22,13 +22,13 @@ window.onload = function () {
     // Создание игрового поля
     board = document.getElementById("board");
     board.height = (total_row + 1) * blockSize;
-    board.width = (total_col+1) * blockSize;
+    board.width = (total_col + 1) * blockSize;
     context = board.getContext("2d");
 
     placeFood();
-    document.addEventListener("keyup", changeDirection);
+    document.addEventListener("keyup", changeDirection);//добавление события срабатывания кнопки
     // Скорость змеи
-    setInterval(update, 1000 / 10);
+    setInterval(update, 100);//обновление каждые 100мс
 }
 
 function update() {
@@ -43,15 +43,16 @@ function update() {
     context.fillStyle = "red";
     context.fillRect(foodX, foodY, blockSize, blockSize);
 
+    // Рост змеи
     if (snakeX == foodX && snakeY == foodY) {
         snakeBody.push([foodX, foodY]);
         placeFood();
     }
-
-    // Рост змеи
+    //привязка блока(хвост)
     for (let i = snakeBody.length - 1; i > 0; i--) {
         snakeBody[i] = snakeBody[i - 1];
     }
+    //задаёт 1й блок(голову)
     if (snakeBody.length) {
         snakeBody[0] = [snakeX, snakeY];
     }
@@ -60,9 +61,10 @@ function update() {
     snakeX += speedX * blockSize;
     snakeY += speedY * blockSize;
     context.fillRect(snakeX, snakeY, blockSize, blockSize);
+    
     for (let i = 0; i < snakeBody.length; i++) {
         document.getElementById("counter").innerHTML = snakeBody.length;
-        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
+        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);//рост
     }
 
     if (snakeX < 0 
